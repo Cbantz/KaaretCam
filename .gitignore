@@ -1,0 +1,6 @@
+.vscode/*
+*/__pycache/*
+results/*
+*.fits
+test_imx_data/*
+*.ipynb
