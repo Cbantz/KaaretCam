@@ -95,13 +95,14 @@ def main():
     #--tiff
     #--fits
     
+    hthr_value=20
     args = __get_args__()
     datap = Path(args.data_path)
     darkp = args.dark_path
     datap_tiff, datap_fits, darkp_tiff, darkp_fits = get_image_paths(data_path=str(datap), dark_path=darkp)
     convert_all_files(datap_fits=datap_fits, darkp_fits=darkp_fits, datap_tiff=datap_tiff, darkp_tiff=darkp_tiff)
     darks_csv = get_darks_csv(darkp=darkp, darkp_tiff=darkp_tiff, darkp_fits=darkp_fits)
-    events_csv = count_events(datap_fits=datap_fits, darkp_fits=darkp_fits, datap=datap, hthr=20, thres=26, thresp=9, hrep=6)
+    events_csv = count_events(datap_fits=datap_fits, darkp_fits=darkp_fits, datap=datap, hthr=hthr_value, thres=26, thresp=9, hrep=6)
     make_event_fits(str(events_csv), energy_range=(int(args.energy_min), int(args.energy_max)), output_path=args.output_path)
     return
 
