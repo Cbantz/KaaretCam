@@ -5,5 +5,5 @@
     "thresp" : 9,
     "data_prefix" : "image_",
     "dark_prefix": "dark_",
-    "show_spectrum": "both"
+    "show_spectrum": "Both"
 }
