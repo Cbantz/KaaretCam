@@ -1,0 +1,9 @@
+{
+    "hthr" : 16,
+    "hrep" : 6,
+    "thres" : 26,
+    "thresp" : 9,
+    "data_prefix" : "image_",
+    "dark_prefix": "dark_",
+    "show_spectrum": "both"
+}
