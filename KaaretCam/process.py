@@ -43,7 +43,7 @@ def convert_all_files(datap_tiff : Path, datap_fits : Path, darkp_tiff : Path, d
     
 
 def get_darks_csv(darkp : Path, darkp_tiff : Path, darkp_fits : Path, hthr : int, hrep : int, dark_prefix : str):
-    darks_csv = Path(darkp_fits / f"{dark_prefix}_hotT{hthr}R{hrep}.csv")
+    darks_csv = Path(darkp_fits / f"{dark_prefix}hotT{hthr}R{hrep}.csv")
     if not darks_csv.exists():
         print("Creating dark pixel csv and average dark...")
         CU.getBadPix(str(darkp_fits / dark_prefix), thr=hthr, rep=hrep)
